@@ -326,9 +326,6 @@ where `neighbourhood group` = 'Manhattan'
 group by  `neighbourhood group`, `room type`
 ;
 
-
-
-
 select `neighbourhood group`,
 dense_rank() over(partition by `neighbourhood group` order by price desc) top_list
 from airbnb
